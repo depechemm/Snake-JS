@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+body {
+    background-image: url("back-index.png");
+}
+
+.game-block {
+    width: 610px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-size: 60px;
+    text-align: center;
+}
+
+canvas {
+    display: block;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(52, 40, 16); 
+
+}
+
+span {
+    font-size: 40px;
+    color: rgb(52, 40, 16); 
+}
+
+.score {
+    font-size: 32px;
+}
+
+button {
+    font-size: 32px;
+    border-style: solid;
+    border-width: 5px;
+    color: rgb(52, 40, 16); 
+    border-color: rgb(52, 40, 16);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:hover {
+    outline: none;
+    background-color: rgb(121, 155, 84);
+}
+
+.zoom {
+    display: inline-block;
+    animation: zoom 2s infinite;
+}
+
+@keyframes zoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.jump {
+    display: inline-block;
+    animation: jump 3s infinite;
+}
+
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
+
+
